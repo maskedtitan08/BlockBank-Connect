@@ -21,11 +21,7 @@ async function main() {
   console.log("Token contract deployed to :",token.target);
 
 
-  // const [deployer] = await ethers.getSigners();
-
-  // const transaction = await token.connect(deployer).passMinterRole(dbank.target);
-  // await transaction.wait();
-  // console.log(token.minter());
+ 
 
   const transaction = await token.passMinterRole(dbank.target);
   await transaction.wait();
